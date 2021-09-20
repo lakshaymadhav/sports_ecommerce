@@ -19,7 +19,7 @@ try{
 		total=rs.getInt(1);
 		
 	}
-	ResultSet rs2=st.executeQuery("select * from users inner join cart where cart.email='"+email+"' and cart.status='bill'");
+	ResultSet rs2=st.executeQuery("select * from users inner join cart where cart.email='"+email+"' and cart.status='bill' and users.email='"+email+"'");
 	while(rs2.next()){
 		
 %>
@@ -42,7 +42,8 @@ try{
 
 <hr>
 
-<%break;} %>
+<%break;
+} %>
 	
 	<br>
 	
